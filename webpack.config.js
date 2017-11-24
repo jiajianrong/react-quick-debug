@@ -1,10 +1,13 @@
 var webpack = require('webpack');
 module.exports = {
   devtool: 'cheap-module-source-map',
-  entry: './src/app.js',
+  entry: {
+      react_diff: './src/app_react_diff.js',
+      redux_raw:  './src/app_redux_raw.js'
+  },
   output: {
       path: __dirname + '/build',
-      filename: "bundle.js"
+      filename: '[name]_bundle.js'
   },
   module: {
       rules: [{
