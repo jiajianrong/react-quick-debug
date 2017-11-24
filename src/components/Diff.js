@@ -11,21 +11,19 @@ export default class Diff extends React.Component {
     
     componentDidMount() {
         setTimeout(()=>{
-            this.setState({fake: !this.state.fake})
+            this.setState({fake: true})
         }, 3000)
     }
     
     render() {
-        
+		
         return (
             <div className="Main">
                 
-				<B/>
+                { this.state.fake ? 
+					(<div><B key=".0"/><C key=".1"/></div>) : 
+					(<div><C key=".1"/><B key=".0"/></div>) }
 				
-                { this.state.fake && (<B xxx="111"/>) }
-				
-				<B/>
-                
             </div>
         );
     }
