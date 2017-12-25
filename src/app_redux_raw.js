@@ -26,13 +26,13 @@ class App extends React.Component {
     }
     
     
-    render() { // Every react component has a render method.
-        return( // Every render method returns jsx. Jsx looks like HTML, but it's actually javascript and functions a lot like xml, with self closing tags requiring the `/` within the tag in order to work propperly
+    render() {
+        return(
             <Provider store={store}>
                 <div>
-                    <button onClick={this.addUser} >add user</button>
-                    <button onClick={this.addProduct} >add product</button>
-        		        <ReduxCompA/>
+                    <button onClick={this.addUser}>add user</button>
+                    <button onClick={this.addProduct}>add product</button>
+                    <ReduxCompA/>
                     <ReduxCompB/>
                 </div>
             </Provider>
