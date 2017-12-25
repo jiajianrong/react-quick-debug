@@ -13,7 +13,7 @@ export default class Child extends React.Component {
   }
   
   render() {
-      console.log('child render')
+      console.log('child render, this.state.x=' + this.state.x)
       return (
           <div>
     		      x in child: {this.state.x}
@@ -24,19 +24,10 @@ export default class Child extends React.Component {
   }
   
   clickHandler = () => {
-      //this.setState({
-      //    x: 2
-      //})
+      this.setState({
+          x: 222
+      })
       this.props.clickHandler()
-  }
-  
-  componentDidMount() {
-      /*setTimeout(()=>{
-          
-         this.setState({x:2, obj: {
-             a: 'b'
-         }})
-      }, 3000)*/
   }
   
 }
