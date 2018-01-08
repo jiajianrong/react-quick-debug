@@ -2,14 +2,14 @@ var webpack = require('webpack');
 module.exports = {
   devtool: 'cheap-module-source-map',
   entry: {
-      app_react_diff:         './src/app_react_diff.js',
-      app_react_batch:        './src/app_react_batch.js',
-      app_react_batch_parent: './src/app_react_batch_parent.js',
-      app_redux_raw:          './src/app_redux_raw.js'
+      app_react_diff:               './src/app_react_diff.js',
+      app_react_batch:              './src/app_react_batch.js',
+      app_react_batch_parent_child: './src/app_react_batch_parent_child.js',
+      app_redux_raw:                './src/app_redux_raw.js'
   },
   output: {
       path: __dirname + '/build',
-      filename: '[name]_bundle.js'
+      filename: '[name].js'
   },
   module: {
       rules: [{
