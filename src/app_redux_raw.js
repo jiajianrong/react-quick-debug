@@ -1,12 +1,11 @@
 import React from 'react';
-
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
 import store from './redux/store';
-
 import ReduxCompA from './components/ReduxCompA'
 import ReduxCompB from './components/ReduxCompB'
+
 
 class App extends React.Component {
     
@@ -27,7 +26,7 @@ class App extends React.Component {
     
     
     render() {
-        return(
+        return (
             <Provider store={store}>
                 <div>
                     <button onClick={this.addUser}>add user</button>

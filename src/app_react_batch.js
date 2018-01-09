@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ReactUpdates from '../node_modules/react-dom/lib/ReactUpdates.js';
+//import ReactUpdates from '../node_modules/react-dom/lib/ReactUpdates.js';
 
 
 class App extends React.Component {
@@ -14,7 +14,7 @@ class App extends React.Component {
   
     render() {
         console.log('app render')
-        return(
+        return (
             <div>
                 {this.state.x}
                 <a href="javascript:;" onClick={()=>this.onClick()}>click</a>
@@ -23,13 +23,11 @@ class App extends React.Component {
     }
   
     componentDidMount() {
-        setTimeout(()=>{
-            ReactUpdates.batchedUpdates(()=>{
-                this.setState({x:4})
-                console.log(this.state)
-                this.setState({x:5})
-                console.log(this.state)
-            });
+        setTimeout( () => {
+            this.setState({x:4})
+            console.log(this.state)
+            this.setState({x:5})
+            console.log(this.state)
         }, 3000)
         
         this.setState({x:2})

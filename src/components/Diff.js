@@ -16,14 +16,14 @@ export default class Diff extends React.Component {
     }
     
     render() {
-		
+        
         return (
             <div className="Main">
                 
                 { this.state.fake ? 
-					(<div><B key=".0"/><C key=".1"/></div>) : 
-					(<div><C key=".1"/><B key=".0"/></div>) }
-				
+                    (<div><B key=".0"/><C key=".1"/></div>) : 
+                    (<div><C key=".1"/><B key=".0"/></div>) }
+                
             </div>
         );
     }

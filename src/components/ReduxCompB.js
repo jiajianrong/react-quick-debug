@@ -6,7 +6,7 @@ let count = 0
 
 class ReduxCompB extends React.Component {
     
-	render() {
+    render() {
         
         console.log('redux_comp_b reducer call: ' + (++count))
         
@@ -26,7 +26,7 @@ class ReduxCompB extends React.Component {
                     
                     </ul>
             </div>
-        );
+        )
     }
 }
 

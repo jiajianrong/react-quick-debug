@@ -12,21 +12,21 @@ class ReduxCompA extends React.Component {
         
         return (
             <div className="Main">
-					
-					<b>ReduxCompA</b>
-					<ul>
-					
-					{
-					    this.props.users.map((user, index) => {
+                    
+                    <b>ReduxCompA</b>
+                    <ul>
+                    
+                    {
+                        this.props.users.map((user, index) => {
                             return (
                                 <li key={user.id}>{user.id} | {user.name}</li>
                             )
                         })
-					}
-					
-					</ul>
+                    }
+                    
+                    </ul>
             </div>
-        );
+        )
     }
 }
 

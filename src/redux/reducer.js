@@ -10,13 +10,13 @@ export default function reducer( previousState={
 
     console.log('top reducer call: ' + (++count))
 
-	switch (action.type) {
+    switch (action.type) {
 
-		case 'user-add':
-			return {
-			    users: [ ...previousState.users, action.payload ],
-			    products: previousState.products
-			}
+        case 'user-add':
+            return {
+                users: [ ...previousState.users, action.payload ],
+                products: previousState.products
+            }
         
         case 'product-add':
             return {
@@ -26,6 +26,6 @@ export default function reducer( previousState={
         
         default: 
             return previousState
-	}	
+    }
 
 }

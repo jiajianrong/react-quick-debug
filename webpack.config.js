@@ -5,7 +5,8 @@ module.exports = {
       app_react_diff:               './src/app_react_diff.js',
       app_react_batch:              './src/app_react_batch.js',
       app_react_batch_parent_child: './src/app_react_batch_parent_child.js',
-      app_redux_raw:                './src/app_redux_raw.js'
+      app_redux_raw:                './src/app_redux_raw.js',
+      app_react_performance_pure:   './src/app_react_performance_pure.js'
   },
   output: {
       path: __dirname + '/build',

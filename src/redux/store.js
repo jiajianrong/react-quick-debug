@@ -6,17 +6,17 @@ import reducer from './reducer';
 /**
  * 统计middleware
  * 功能：
- * 	控制台打印触发的action
- *  控制台打印触发的action是否为异步action（dispatching a function）	
+ *     控制台打印触发的action
+ *  控制台打印触发的action是否为异步action（dispatching a function）    
  *  控制台打印即将改变的 新state 此时state还未改变
  */
 // eslint-disable-next-line
 const logger = store => next => action => {
-	if(typeof action === 'function') console.log('dispatching a function');
-	else console.log('dispatching', action);
-	let result = next(action);
-	console.log('next state', store.getState());
-	return result;
+    if(typeof action === 'function') console.log('dispatching a function');
+    else console.log('dispatching', action);
+    let result = next(action);
+    console.log('next state', store.getState());
+    return result;
 }
 
 /**
@@ -31,8 +31,8 @@ const logger = store => next => action => {
  */
 
 let middlewares = [
-	// logger,
-	// thunk
+    // logger,
+    // thunk
 ];
 
 /**
