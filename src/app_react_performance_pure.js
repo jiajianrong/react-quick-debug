@@ -1,22 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PurePerfChild from './components/PurePerfChild'
+import shallowEqual from './libs/shallowEqual';
+
+
+export default class PurePerfChild extends React.Component {
+    
+    shouldComponentUpdate(nextProps, nextState) {
+        return !shallowEqual(this.props, nextProps) || !shallowEqual(this.state, nextState);
+    }
+    
+    render() {
+        console.log('PurePerfChild render')        
+        return (
+            <div>PurePerfChild</div>
+        )
+    }
+}
+
 
 
 class App extends React.Component {
     
     constructor(props) {
         super(props)
-        this.state = {
-            x: 1
-        }
+        this.state = {x: 1}
     }
     
     componentDidMount() {
         setTimeout( () => {
-            this.setState({
-                x: 2
-            })
+            this.setState({x: 2})
         }, 3000 )
     }
     
