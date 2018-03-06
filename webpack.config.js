@@ -9,6 +9,7 @@ module.exports = {
       app_redux_raw:                './src/app_redux_raw.js',
       app_react_performance_pure:   './src/app_react_performance_pure.js',
       app_react_inherit:            './src/app_react_inherit.js',
+      app_redux_connect:            './src/app_redux_connect.js',
   },
   output: {
       path: __dirname + '/build',
