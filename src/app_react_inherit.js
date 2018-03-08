@@ -113,7 +113,11 @@ function decorate(settings={}) {
 class Child extends React.Component {
     render() {
         return (
-            <div>{decorate({...this.props})(<Parent />)}</div>
+            <div>
+            {decorate({
+                ...this.props
+            })(<Parent />)}
+            </div>
         )
     }
 }

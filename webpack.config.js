@@ -10,6 +10,7 @@ module.exports = {
       app_react_performance_pure:   './src/app_react_performance_pure.js',
       app_react_inherit:            './src/app_react_inherit.js',
       app_redux_connect:            './src/app_redux_connect.js',
+      app_react_children:           './src/app_react_children.js',
   },
   output: {
       path: __dirname + '/build',
