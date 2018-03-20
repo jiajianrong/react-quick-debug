@@ -11,6 +11,7 @@ module.exports = {
       app_react_inherit:            './src/app_react_inherit.js',
       app_redux_connect:            './src/app_redux_connect.js',
       app_react_children:           './src/app_react_children.js',
+      app_react_quick_demo:         './src/app_react_quick_demo.js',
   },
   output: {
       path: __dirname + '/build',
